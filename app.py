@@ -30,6 +30,8 @@ if uploaded_files and st.button("🚀 Xử lý & Đối chiếu chéo"):
         st.download_button(
             label="📥 Tải xuống Báo cáo Excel",
             data=excel_bytes,
-            file_name="Bao_Cao_Doi_Soat_Xang_Dau.xlsx",
-            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            # file_name="Bao_Cao_Doi_Soat_Xang_Dau.xlsx",
+            file_name=f"Bao_Cao_{file.name}.xlsx"
+            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            key=f"download_btn_{idx}"  # <--- Dùng index của vòng lặp làm key độc lập
         )
